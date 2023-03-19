@@ -1,0 +1,35 @@
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-dark" style="
+          height: 100px;
+          "></div>
+    <div class="container col-md-6 card text-center " style="margin-top: -50px;background: hsla(0, 0%, 100%, 0.486);backdrop-filter: blur(30px);">
+    <h1 style="color:black">Edit Account</h1>
+    <form  (ngSubmit)="editAccount()" style="width:90%;">
+        <div class="row mb-3">
+            <label for="accountNumber" class="col col-form-label">Account Number</label>
+            <input type="text" class="col" id="accountNumber" name="accountNumber" [(ngModel)]="account.accountNo" />
+        </div>
+       
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Status</label>
+            <div class="col " align="left">
+            <input type="radio" id="ACTIVE" name="status" value="ACTIVE" [(ngModel)]="account.status">
+         <label for="ACTIVE">ACTIVE</label><br>
+        <input type="radio" id="INACTIVE" name="status" value="INACTIVE" [(ngModel)]="account.status">
+             <label for="INACTIVE">INACTIVE</label><br>
+        </div>
+    </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Account Type</label>
+            <div class="col " align="left">
+            <input type="radio" id="CURRENT" name="accountType" value="CURRENT" [(ngModel)]="account.accountType">
+         <label for="CURRENT">CURRENT</label><br>
+        <input type="radio" id="SAVING" name="accountType" value="SAVING" [(ngModel)]="account.accountType">
+             <label for="SAVING">SAVING</label><br>
+        </div>
+    </div>
+        <button type="submit" class="btn btn-dark mb-5">Edit</button>
+    </form>
+</div>
+</section>

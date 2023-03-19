@@ -1,0 +1,41 @@
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-dark" style="
+          height: 100px;
+          "></div>
+    <div class="container col-md-6 card text-center " style="margin-top: -50px;background: hsla(0, 0%, 100%, 0.486);backdrop-filter: blur(30px);">
+        
+    <h1 style="color:black">Edit Customer</h1>
+    <form (ngSubmit)="editCustomer()" style="width:90%;">
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Customer Id</label>
+            <input type="text" class="col" id="personId" name="personId"
+                [(ngModel)]="customer.personId" />
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Person Name</label>
+            <input type="text" class="col" id="personName" name="personName"
+                [(ngModel)]="customer.personName" />
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Gender</label>
+            <div class="col " align="left">
+            <input type="radio" id="MALE" name="gender" value="MALE" [(ngModel)]="customer.gender">
+            <label for="MALE">MALE</label><br>
+            <input type="radio" id="FEMALE" name="gender" value="FEMALE" [(ngModel)]="customer.gender">
+            <label for="FEMALE">FEMALE</label><br>
+        </div>
+        </div>
+        
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Telephone Number</label>
+            <input type="text" id="telephoneNumber"class="col" name="telephoneNumber"  [(ngModel)]="customer.telephoneNumber">
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Email Id</label>
+            <input type="text" id="email" name="email" class="col"  [(ngModel)]="customer.email">
+        </div>
+
+        <button type="submit" class="btn btn-dark mb-5">Edit</button>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<div class="container col-md-6 text-center">
+    <h1 style="color:black">Create Account</h1>
+    <form (ngSubmit)="createAccount()">
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Customer Id</label>
+            <input type="text" class="col" id="personId" name="personId" [(ngModel)]="account.personId" />
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Initial Balance</label>
+            <input type="number" class="col" name="balance" id="balance" [(ngModel)]="account.balance" />
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Status</label>
+            <div class="col " align="left">
+                <input class="form-check-input" type="radio" id="ACTIVE" name="status" value="ACTIVE"
+                    [(ngModel)]="account.status">
+                <label class="form-check-label" for="ACTIVE">ACTIVE</label><br>
+                <input class="form-check-input" type="radio" id="INACTIVE" name="status" value="INACTIVE"
+                    [(ngModel)]="account.status">
+                <label class="form-check-label" for="INACTIVE">INACTIVE</label><br>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Account Type</label>
+            <div class="col " align="left">
+                <input class="form-check-input" type="radio" id="CURRENT" name="accountType" value="CURRENT"
+                    [(ngModel)]="account.accountType">
+                <label class="form-check-label" for="CURRENT">CURRENT</label><br>
+                <input class="form-check-input" type="radio" id="SAVING" name="accountType" value="SAVING"
+                    [(ngModel)]="account.accountType">
+                <label class="form-check-label" for="SAVING">SAVING</label><br>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Minimum Balance</label>
+            <input type="number" class="col" name="minBalance" id="minBalance" [(ngModel)]="account.minBalance" />
+        </div>
+
+        <button type="submit" class="btn-btn-primary mb-5">Create</button>
+    </form>
+</div>

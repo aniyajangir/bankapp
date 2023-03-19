@@ -1,0 +1,48 @@
+<div class="container col-md-6 text-center">
+    <h1 style="color:black"  >Mini Statement</h1>
+    <form (ngSubmit)="onClick()" >
+        <div class="row mb-3">
+            <label for="exampleFormControlInput1" class="col col-form-label">Account Number</label>
+            <input type="number" class="col" id="accountNumber" name="accountNumber" [(ngModel)]="accountNumber"  />
+        </div>
+        <button type="submit" id="MiniStatementButton" class="btn btn-primary mb-5">Find</button>
+    </form>
+</div>
+<div  *ngFor="let transaction of transactions">
+	{{transaction.date}}
+	<table  class="table  mb-5" align="center">
+
+		<tbody>
+
+			
+			<tr>
+				<td>Transaction Status</td>
+				<td>
+					{{transaction.status}}
+				</td>
+			</tr>
+			<tr>
+				<td>From Account</td>
+				<td>
+					{{transaction.fromAccountNumber}}
+				</td>
+			</tr>
+			<tr>
+				<td>To Account</td>
+				<td>
+					{{transaction.toAccountNumber}}
+				</td>
+			</tr>
+            <tr>
+				<td>Date</td>
+				<td>
+					{{transaction.date}}
+				</td>
+			</tr>
+		
+	
+		</tbody>
+
+	</table>
+
+</div>

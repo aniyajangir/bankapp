@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  
+    <div class="card" style="padding: 20px; width: 500px; text-align: center; margin: auto;">
+        <div class="card"  style="margin-bottom: 10px;">
+            <h2>Login Here</h2>
+        </div>
+
+<form (ngSubmit)="userLogin()" >
+    <div class ="form-control mb-3">
+        <label for="userName" class="col col-form-label p-2">User Name</label>
+        <input type="text" class="col" id="userName" name="userName" [(ngModel)]="user.userName"/>
+    </div>
+    <div class ="form-control mb-3">
+        <label for="password" class="col col-form-label p-2">Password</label>
+        <input type="password" class="col" name="password" id="password" [(ngModel)]="user.password"/>
+    </div>
+    <button type="submit" id="loginButton" class="btn btn-outline-primary form-control rounded">Login</button>
+</form>
+    </div>

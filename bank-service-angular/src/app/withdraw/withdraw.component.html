@@ -1,0 +1,22 @@
+<div class="container col-md-6 text-center">
+    <h1 style="color:black"  >Withdraw Form</h1>
+    <form (ngSubmit)="withdraw()" >
+        <div class="mb-3 ">
+            <label for="result" class="form-label" [hidden]="check">{{result}}</label>
+            
+        </div>
+        <div class="row mb-3">
+            <label for="fromAccountNumber" class="col col-form-label">Account Number</label>
+            <input type="number" class="col" id="fromAccountNumber" name="fromAccountNumber" [(ngModel)]="transaction.fromAccountNumber"  />
+        </div>
+        <div class="row mb-3">
+            <label for="amount" class="col col-form-label">Amount</label>
+            <input type="number" class="col" id="amount" name="amount" [(ngModel)]="transaction.amount"  />
+        </div>
+        <div class="row mb-3">
+            <label for="description" class="col col-form-label">Description</label>
+            <input type="text" class="col" id="description" name="description" [(ngModel)]="transaction.description"  />
+        </div>
+        <button type="submit" class="btn-btn-primary mb-5">Withdraw</button>
+    </form>
+</div>

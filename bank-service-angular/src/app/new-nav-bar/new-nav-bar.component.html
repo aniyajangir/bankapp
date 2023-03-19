@@ -1,0 +1,79 @@
+<!-- 
+<div>
+    <div class="collapse bg-dark" id="navbarDropdownMenuLink" >
+      <div align="right" class="px-2" >
+        <button type="submit" class="dropdown-item btn-dark text-white" id="login" (click)="onSubmit()" >login</button>
+        <a class="dropdown-item text-white mr-5 " href="#about">about</a>
+        <a class="dropdown-item text-white mr-5 " href="#contact">contact us</a>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="mx-3">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEBUSExIWFRUWFxUVEhUXFRYXGBcWFRUWFhUSFhUYHSggGRolGxUXITEhJSkrLi4uGB8zODMsNygtLisBCgoKDg0OGxAQGi8lICUrLS0tLS0tLy01Li0tLS8tLS0tLSstLS01KysrLS0rLSstLSsrLS0tLS0tKystLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAgEDBAUGBwj/xABAEAACAQIDBAYHBQcDBQAAAAAAAQIDEQQSIQUxUWEGIkFxgZEHExRCocHRMlKSsfAjM1NyouHxFWKCQ2NzssL/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAnEQEAAgIBBAIBBAMAAAAAAAAAAQIDESEEEjFBEyLwMlFhwVJxgf/aAAwDAQACEQMRAD8A9xAAApGVyE5EobgJAAAAAABGTAkCFuZKLAqAAAAAAAAUjK6uQlK5KG4DC23tBUKEqnbuguMnuXz7kzy6cm223dttt8W97Og6Z7T9ZW9XF9Wndd8/efhu8znjrxV1DO0gANFQAnGHK7e5fNhKBn7D2c69eNPs3zfCK3+e7xMOSs7NW8/1Y7/ofsz1VHPJdepZvlH3V8/Epkt2wmI3Laf6bR/hQ/CgZYOTctAtzkTktCMIkBCJMAAAAAAAEIkykkBElFCKKgAAAAAAtTlcnNXRSEe1gIxNf0h2l6ihKa+0+rT/AJn2+Gr8DZnG9PqNRunKzdNJruk3296S8i9I3bUomeHINgA7GQAABfp1css1r3/T+JYKqXkEt/sPZvtFZOS6qSk1yT0T732cLnoCRqujWzvU0FmXXlaU+WmkPBfG5tjjyW3LSIAAUSAAAAAAAAAAAAAAAAAFJbgLVTEwW9+Wpb9uhz8jFqxpJaNtmOYWyTDprirMe2z9uhz8iEtoR7E38DXAr8tlow1ZU8dJ7rIxa6zpqXWT0aYBWbTK8VrHiHH7Z2S6TzR1g9z4cn9TVnodSCkmmrp6NM5DbWyXSeaOsHufDk/qd/T9R3fW3lyZsPbzHhqyoKHW5w3vRDZnra+eS6lO0nzl7sfn4czRxi20krt6JcW9yPUNg7OVChGHvfam+Mnv8t3gZ5bahNY22AAORoAAAAAAAAAAAAAAAAAACFWooq7NdVrSm7JacF8zLxWGc2tbWLFaooLLDf2v9dplffvw2x69cyxakGnZkCpKnBt2SuYf6dPiOUAZ0Nn8ZeQns/hLzLfHZT5a/uwQXKtGUd6+hbKzGl4nfgKTgmmmrp6NPtJFCEuQ21sl0nmjrB9vDk/qao9Kw+GU21JXjbrJ7nyOb2r0Sqqr+xWaEt12lk5SvvXNf59PBm7q/ZwZqRW3CnQnZmeq60l1af2ec39Fr4o7wxNl4GNGlGnH3Vq+Lerl5mWUvbunasRoABRIAAABGTAkCCXeSiwKgAAAAAAAFIyuW5SuTgtALWMrZY6b3ovqYGGw7m+XazOxWHz21ta/xJu0IadiM5ru3PhrW/bXUeWBjGk8sVovzM7C0cseb3/QwcHTzTu+zV95tCMcbnuTlnUdoARbNWKsopqzNViqGV8nu+hs0uF+4t4qKlB8tfIpeu4aY79stSVSvoUNhgKHvPw+pz1r3Tp1Xt2xtkYajljbt7e8ugHVEacUzvkADZKBspF3Vy3KVy5FaAVAAAgiZRoCLJRQSKgAAAAABlqUrlySuiMIgIRJgACxjItwaSvu/MvnOdPOkfsWFc429bN5KKf3rXc2uEVr32XaNb4TE6nbG6Q9L8NgI5JftKzV/VQaur7nOW6C+PBM4t9Otr4pv2WjaN/+lRlUtylOScb+CL/QLoX7SnjcWnUUm5U6cnrVd9alRvfFvcu3e9N+bisL0jjmdOVOELvJRp+zWhHshHPBXSWmrLxFY4TM7nbVS6V7dw/XrUpSitW6mHtFLnKmo28zqujPpEw9dxp1V6mcrKLbvTlJ74KXuu/Y+Wrucpsja+3sRVqUYYnLVpq86dSFCErXtdJ0tbaea4m6256P51MGqvVljFHNXSjGMK0neThlgoxUleykkr2133UzEe0PRSGJ0hLu/PQ4T0V9KZV4ywtZ3qU1mpt75U00nB31bi2lrrZrg2drtKfVS4/Iyv8AWJTSN2iGviruxu4qysajDLrx70bgywx5a555iAAGzAbLUncnNCEQEYkgAAAAAAAAAAAAAAAAAAAAHkPpTnKvtPD4W+mWnBcpV6lpPyUPI9ePIfSX+x2tQxDWlqFRPj6qq3KPfZR8y9PKYes0qKhBQgklGKjCO5JRVorktDz7E9HduuUpvH04ptysqlRQim72X7PRI9EhJNJp3TV0+Ke5nivSHZdSnj/V7Rr11hqs5unVjOU42crxVp3Ucqdmradl0RVDH2dg8fiNouNHFqpWhBqWJjOeRRSs1ny3au7btX3XPZtiYSpSw9OnVqOrUUf2lRu+aT1la/Zd2XJIxujWwsLhaWXDxWWVpOd80qmmknLtVnpbTXQ24tbY8d2lT9k6RQcNI1KtOVlwxHUqf1Skz1Lae9dzPLtvz9p6RU4Q1yVaMG//AA2qVPLrLwPWcZQzLTetxXNG6tKTEWiZYeAhefdr8jaGNgqDinfezJKY41BltuwAC7MAAAAAAAAAAAAAAAABSTsrvxMfDY6nUbUXquVtOKCYrMxuIZJrekeOdDC1Ky9yLk7b7RV3bnZGyOa9I9TLszEPjDL+JqPzCafqhY9H/Sb2yi3LScW043zW8bK6s0/PgdYeA+jfbXs+Nim7Qq2hL+b3X8Wv+R7riMdThvku5av4BaYm+piPLJOT9I/Rx4vC3pxvWotzpr7ya69PxSTXOKL+2OltKhDPNqEdycrtvkox1b7jh9qelR6qlCUucmqa70km342JidLThmv6piPz+Gz9G3TWGSODxMss49WjOWiktypSb3SW5X3qy37+92vsujiaMqNaClCXmn2Si+yS4nz/AI+WJxdV1fZZXl9p06dS0n96Td03z0ubvZeP21Qio03XUVujKKqK3BKabXgW1E8wp2T6dXseGP2XX9ndKrisHJ3hOnCU5Uk3vyxWnOO57463Ru+m/TOlg6TjBqWIkupD7l1pUqLsS4PV+bXm+1OlG2XFqpOtTj25aPq/64xuvBmh2JjMMq2fExnUV72VpJyvq6ibvJcr68yZiPMo7edTw9G9E3R6d5Y+sneaao5t8lJ3nWffuT7es9zR6YcnsTpnQrJKEoysvsx6skl/25a2+B0eGx1Of2Za8HoykzuVrYrxG9cMkAEMwAAAAAAAAAAAAAIxlchKVycEBIAARqwUotPc00/E5OMpQnppKL+K0Ol2n631FX1OX1uSfqc32fWZXkzcs1rnnPQHD7XnCu9oqatKmqDqqCnmcmqiWTfDWNuy+7S4dXTZYpPbPiXaf6hWqaU424vf8XojW7e6PVsTRlSqSbUnHNaV3aMlKyvor2sdJkVKk8sb5YtpLfJpX82fLOJ2visTXWJq1ZTrzean1mlTvqnFX6kUtyXe+ZHzxHFKxp67U6E4NLL6uUJL3lUmpJ8dXa/gb+Cslrfi+PMxeiNeviNl0q2IeatByhOf8SMZuMZt9srWTfFMyyHf09qWrusaavbuwqWKUFUzLI24uLSetsy1T0dl5E9nbCw1D93Rin95rNL8Urs2IDXsrvu1yAAhcMDaGxsPW/e0YSf3rWl4SWvxM8EomImOXC7U6A2efDVGmtVCb7f9tRarx8zpOi9LExw6WJd6ik8uqclHSylJb3e+vCxt0UG2NMNa23VscFtaUdJdaPxXj2m9oVozWaLujkTIweLlTldbu1cf7jbLP0sW5rxLqgW6FZTipR3P9WLhLzJjXAAQbv3fmEJghl4EosCoAAFqUrlySIxjxAQiTAAA0PSLFOEleeSNlrmyq7lbV+KS7zX+vn9+X4mHXj6Sb1i22wxW1Zqq8tsq0s9ztvZZq7TnKUW7JRkpWXbZmCCNu+vT449OxjJNXW57jhsf6Ldn1cV7QnVpO95U6coqnK976OLa37otcrG2wO05U1ZrNHsXau5mZU23G2kHfm0S863S5InURtXF0qdDDqlCKjFJRhBcE7v/ADzNIXcTiJTleT7uC7i0Q9Dp8Px11PkABDcAAARYYbJRPIACEgAA2OxsVlnle6Xwl2P5eRnbUxbuqUH1pWTfBP5mhTNpsOi5TdR627f9z3vy/Mlx58VYn5Z/J9N3TjZJcFYpHh2kyjiS8tEkkEioAAAAAAAAHF+lHZs62EcYK8rZorjklGWXvavbmY+y3P1FL1l1P1cM99+bKs1+dzrtr4dzp6b46r5ryObIl6fR6mu/+f2Av4fCTn9mN1x3I2FHYb96VuUfqw6L58dPMtQVUXa9nbtfZ5nS0dmUo+7d8Za/DcXcZRUqco8nbv3r4jTmnra71EOUABDuAASAAAAAgAAAAAA6TY0bUY87t+bObOswVPLTjHglfv7SYcXXT9Yj+V4AEvMAAAAAAAAAAANXjtkKTzQdm96e58+RtAF6ZLUndWn2Tmp1JU56NpSXO3D9dhuDE2hhM6TWk46xfPgYlDa9urVi1JaNr5oNbROX718+4bYx8fWUKcnysu96Ix6m2KSWl3ySfzNPjsbKo9dEty+b4sLYemva3MahigAq9YABIAAAACAAAAAnRpSlJRirt/q5KJmI5lk7Lw2eouC1l8kdMY+Bwqpxst+9vizIJeP1GX5L7jwAAMAAAAAAAINgTBDKSiwKgAAYmOwEai10l2SX5PijLAWraazuHLYnAVIb1dcVqv7GMdkY9bB05aygu+1n5ojTtp1v+UOVKJnRf6bSv9j+qX1NdtjCxg45Va9768LW39403x9VW9u2Ia8AlODW9Nd6t+ZDq2iAAABKnBt2SbfIImdIgyns+rZtx0Su/wDG8xSVa3i3iWRhMHOo+qtO2T3L+50OCwUaastX2vtf9jE6Pfu5fzv/ANYm0Jeb1Wa02mvqAAByABGUrAJyt3lUW0rl0AAABAmUaAiSSCRUAAAAAAo2W5SuXJIpGICMTT9It8P+XyN0WcThoVFaSvw5eIa4bxS8Wlo9i4bNPM90fz7PqdC1feQw9CMI5Yqy/WpcCc+X5L7WJYSm98I/hRH2Cl/Dj5GSAz77fusRwdNboR/Ci5GNtN3AmUaCJmZ8o2uc1tLDerqNdj1j3cPD6HTpFrE4WFRWkr23cg2wZvjtv0wej/7uX83/AMo2hboUIwjlirIuBTLfvvNoAAGaMpWIJX+ZclG4SAJFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"
+          height="58" style="border-radius: 50%;" alt="img">
+          <i class='fas fa-piggy-bank' style='font-size:48px;color:red'></i>
+        <a class="navbar-brand mx-3 " href="#">Piggy Bank</a>
+      </div>
+  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdownMenuLink"
+        aria-controls="navbarDropdownMenuLink" id="dropdownButton" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+  
+    </nav>
+  </div> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Bolt Bank</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active"  href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  routerLink="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/contact">Contact Us</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/admin" *ngIf="userService.roleMatch(['Admin'])">Admin Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/user" *ngIf="userService.roleMatch(['User'])">User Dashboard</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li> -->
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+        <!-- <button  type="button" class="btn btn-success" routerLink="/login">Login</button> -->
+        <button type="submit"  class="btn btn-success" *ngIf="!isLoggedIn" id="login" (click)="onSubmit()" >login</button>
+        <button  type="button" class="btn btn-danger"  *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+        <!-- <button type="submit" class="btn btn-danger" style="margin-left: 10px;" (click)="logout()">Logout</button> -->
+      </div>
+    </div>
+  </nav>

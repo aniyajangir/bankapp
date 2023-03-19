@@ -1,0 +1,36 @@
+<section class="text-center">
+    <!-- Background image -->
+    <!-- <div class="p-5 bg-dark" style="
+          height: 100px;
+          "></div> -->
+    <div class="container col-md-6 card text-center " style="margin-top: 50px;background: hsla(0, 0%, 100%, 0.486);backdrop-filter: blur(30px);">
+        <div class="card" style="margin-top: 10px;"><h1 style="color:black">Fund Transfer Form</h1></div>
+        
+        <form (ngSubmit)="fundTransfer()" class="text-center" style="width:90%;">
+            <div class="mb-3 ">
+                <label for="result" class="form-label" [hidden]="check">{{result}}</label>
+
+            </div>
+            <div class="row mb-3 ">
+                <label for="fromAccountNumber" class="col col-form-label">From Account Number</label>
+                <input type="number" class="col" id="fromAccountNumber" name="fromAccountNumber"
+                    [(ngModel)]="transaction.fromAccountNumber" />
+            </div>
+            <div class="row mb-3">
+                <label for="toAccountNumber" class="col col-form-label">To Account Number</label>
+                <input type="number" class="col" id="amount" name="toAccountNumber"
+                    [(ngModel)]="transaction.toAccountNumber" />
+            </div>
+            <div class="row mb-3">
+                <label for="amount" class="col col-form-label">Amount</label>
+                <input type="number" class="col" id="amount" name="amount" [(ngModel)]="transaction.amount" />
+            </div>
+            <div class="row mb-3">
+                <label for="description" class="col col-form-label">Description</label>
+                <input type="text" class="col" id="description" name="description"
+                    [(ngModel)]="transaction.description" />
+            </div>
+            <button type="submit" class="btn btn-primary mb-5">Transfer</button>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,155 @@
+<div class="container col-md-8">
+    <div class="row mb-3  ">
+
+        <div class="col px-5">
+            <h1>Dashboard</h1>
+        </div>
+        <!-- <div class="col" align="right">
+            <button type="submit" class="btn btn-danger m-3" (click)="logout()">Logout</button>
+
+        </div> -->
+    </div>
+
+    <div class="col-sm pb-5 pl-5 pr-5  m-2 " [hidden]="checkForCustomer">
+        <div class="py-3 text-center">
+            
+            <h3 class=" text-black">Balance Services</h3>
+        </div>
+        <ul [hidden]="checkForCustomer" class="py-3 "
+            style="list-style-type:none; background-color: rgb(192, 192, 182); ">
+            <li class="text-center"><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                    (click)="changeCheckForFundTransfer()">Fund Transfer</button></li>
+            <li class="text-center"><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                id="checkMiniStatement"
+                    (click)="changeCheckForMiniStatement()">MiniStatement</button></li>
+            <li class="text-center"><button style="width:70% ;" type="submit" class="btn btn-dark m-3" 
+                id="checkBalanceCustomer"
+                    (click)="changeCheckForBalanceEnquiry()">Check Balance</button></li>
+        </ul>
+    </div>
+   
+
+        <div class="row">
+            <div class="col-sm pb-5 pl-5 pr-5 m-2 " [hidden]="checkForManager" align="center">
+                <div class="py-3 text-center">
+                    <h3 [hidden]="checkForManager" class=" text-black">Customer Services</h3>
+                </div>
+
+                <div class="mt-3" style="list-style-type:none; background-color: rgb(215, 215, 193); ">
+                    <p class="pt-3">
+                        To create/update/delete Customer
+                    </p>
+                    <button class="btn text-center " type="button" data-toggle="collapse" data-target="#customerRelatedButtonCollapsed"
+                        aria-expanded="false" aria-controls="customerRelatedButtonCollapsed">
+                        Click here
+                    </button>
+                </div>
+
+                <div class="collapse" id="customerRelatedButtonCollapsed">
+                    <div class="card card-body">
+                        <ul  [hidden]="checkForManager"
+                            style="list-style-type:none; background-color: rgb(215, 215, 193); ">
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3 "
+                                    (click)="changeCheckForCreateCustomer()">Create Customer</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3 "
+                                    (click)="changeCheckForEditCustomer()">Edit Customer</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                    (click)="changeCheckForDeleteCustomer()">Delete Customer</button></li>
+                        </ul>
+                        <a> </a>
+                    </div>
+                </div>
+
+
+
+            
+            <div class="col-sm pb-5 pl-5 pr-5 m-2 " [hidden]="checkForManager" align="center">
+                <div class="py-3 text-center">
+                    <h3 [hidden]="checkForManager" class=" text-black">Balance Services</h3>
+                </div>
+
+                <div class="mt-3" style="list-style-type:none; background-color: rgb(215, 215, 193); ">
+                    <p class="pt-3 text-weight-bold">
+                        To deposit/withdraw/fund Transfer/ministatement
+                    </p>
+                    <button class="btn text-center " type="button" data-toggle="collapse" data-target="#balanceRelatedButtonCollapsed"
+                        aria-expanded="false" aria-controls="balanceRelatedButtonCollapsed">
+                        Click here
+                    </button>
+                </div>
+
+                <div class="collapse" id="balanceRelatedButtonCollapsed">
+                    <div class="card card-body">
+
+                        <ul  [hidden]="checkForManager"
+                            style="list-style-type:none; background-color: rgb(215, 215, 193); ">
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                    (click)="changeCheckForFundTransfer()">Fund Transfer</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                id="checkMiniStatement"
+                                    (click)="changeCheckForMiniStatement()">MiniStatement</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                    (click)="changeCheckForDeposit()">Deposit</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                    (click)="changeCheckForWithdraw()">Withdraw</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                id="checkBalanceManager" 
+                                (click)="changeCheckForBalanceEnquiry()">Check Balance</button></li>
+                        </ul>
+                        <a> </a>
+                    </div>
+              
+
+
+
+            </div>
+
+            <div class="col-sm pb-5 pl-5 pr-5  " [hidden]="checkForManager" align="center">
+                <div class="py-3 text-center">
+                    <h3 [hidden]="checkForManager" class=" text-black">Account Services</h3>
+                </div>
+
+                <div class="mt-3" style="list-style-type:none; background-color: rgb(215, 215, 193); ">
+                    <p class="pt-3 text-weight-bold">
+                        To create/update/delete Account
+                    </p>
+                    <button class="btn text-center " type="button" data-toggle="collapse" data-target="#accountRelatedButtonCollapsed"
+                        aria-expanded="false" aria-controls="accountRelatedButtonCollapsed">
+                        Click here
+                    </button>
+                </div>
+
+                <div class="collapse" id="accountRelatedButtonCollapsed">
+                    <div class="card card-body">
+                        <ul [hidden]="checkForManager"
+
+                            style="list-style-type:none; background-color: rgb(215, 215, 193); ">
+        
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                    (click)="changeCheckForCreateAccount()">Create Account</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                    (click)="changeCheckForEditAccount()">Edit Account</button></li>
+                            <li><button style="width:70% ;" type="submit" class="btn btn-dark m-3"
+                                    (click)="changeCheckForDeleteAccount()">Delete Account</button>
+                            </li>
+                        </ul>
+                        <a> </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

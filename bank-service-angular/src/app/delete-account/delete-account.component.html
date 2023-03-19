@@ -1,0 +1,14 @@
+<div class="container col-md-6 text-center">
+    <h1 style="color:black"  >Delete Account</h1>
+    <form  (ngSubmit)="deleteAccount()" >
+        <div class="mb-3 ">
+            <label for="result" class="form-label" [hidden]="check">{{result}}</label>
+            
+        </div>
+        <div class="row mb-3">
+            <label for="accountNumber" class="col col-form-label">Account Number</label>
+            <input type="number" class="col" id="accountNumber" name="accountNumber" [(ngModel)]="accountNumber"  />
+        </div>
+        <button type="submit" class="btn btn-primary mb-5">Delete</button>
+    </form>
+</div>

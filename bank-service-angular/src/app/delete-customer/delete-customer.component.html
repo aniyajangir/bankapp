@@ -1,0 +1,15 @@
+<div class="container col-md-6 text-center">
+    <h1 style="color:black"  >Delete Customer</h1>
+    <form  (ngSubmit)="deleteCustomer()"  >
+        
+        <div class="mb-3 ">
+            <label for="result" class="form-label" [hidden]="check">{{result}}</label>
+            
+        </div>
+        <div class="row mb-3">
+            <label for="customerId" class="col col-form-label">Customer Id</label>
+            <input type="number" class="col" id="customerId" name="customerId" [(ngModel)]="customerId"  />
+        </div>
+        <button type="submit" class="btn btn-primary mb-5">Delete</button>
+    </form>
+</div>
